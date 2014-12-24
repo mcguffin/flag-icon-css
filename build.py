@@ -2,42 +2,6 @@
 
 import sys, os, pystache, urllib, pprint
 
-'''
-WordPress localizations are pretty weird.
-Some only consist of a language code (like 'fi'). 
-Some have a language and country code (like de-DE). 
-en-US as default langugage is not encoded at all and falls back to an empty string.
-
-Table:
-Languages covered by the available WP localizations without country codes and their corresponding country codes.
-Coutries for the arab language taken from http://en.wikipedia.org/wiki/Arabic_language#mediaviewer/File:Arabic_speaking_world.svg
-
-langcode	Country
-	'ar'	'eg','dz','bh','dj','er','iq','il','ye','jo','qa','km','kw','lb','ly','ma','mr','om','sa','so','sd','sy','td','tn','ae',
-	'az'	'az',
-	'ca'	'fr',
-	'cy'	'gb',
-	'eu'	'es',
-	'fi'	'fi',
-	'gd'	'gb',
-	'hr'	'hr',
-	'ja'	'jp',
-	'th'	'th',
-
-Languages known for beiong spoken in than one country
-(there are likely more, will researching this later)
-	Language	Country codes
-	'de'		'ch','at','be'
-	'es'		'es','gq','cr','do','sv','gt','hn','cu','mx','ni','pa','pr','ar','bo','cl','ec','co','py','pe','uy','ve'
-	'pt'		'pt','ao','br','gq','gw','cv','mz','st','mo','tl'
-	'fr'		'fr','ca',
-'''
-
-# country codes covered by WordPress
-wp_codes = ['bg','ba','dk','de','ca','gb','au','es','pe','cl','ir','fr','es','il','hu','id','it','kr','mm','no','nl','pl','pt','br','ru','sk','rs','se','tr','cn','tw','us']
-
-	
-
 do_codes = []
 
 css_template = """
